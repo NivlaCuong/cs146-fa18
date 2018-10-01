@@ -1,4 +1,4 @@
-package SortingAlgorithm;
+package hw1;
 
 /**
  * A class has 2 sorting algorithms: Insertion and Merge Sort

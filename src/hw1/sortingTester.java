@@ -1,4 +1,4 @@
-package SortingAlgorithm;
+package hw1;
 
 class sortingTester {
 
