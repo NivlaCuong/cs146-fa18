@@ -3,7 +3,7 @@ package hw1;
 class sortingTester {
 
     private int[] reversedList = new int[20], sortedList = new int[20];
-    private int[] avgList = { 12, 14, 10, 8, 6, 5, 11, 7, 13, 19, 17, 16, 0, 4, 15, 18, 1, 2, 9, 3 };
+    private int[] avgList = { 12, 14, 10, 8, 6, 5, 11, 7, 13, 19, 17, 16, 0, 4, 15, 18, 1, 2, 9};
     private sortAlgorithm sort = new sortAlgorithm();
 
     /**
@@ -17,38 +17,14 @@ class sortingTester {
     /**
      * Testing Worst Case for both algorithm
      */
-    void testingWorseCase() {
-        System.out.println("Worst Case (Reversed List)");
+    void testingCase(String caseName, int[] list) {
+        System.out.println(caseName + " Case");
         System.out.print("Original List: ");
-        printList(reversedList);
+        printList(list);
         System.out.println();
 
-        getRunningTime(reversedList,"Insertion");   // Insertion Sort
-        getRunningTime(reversedList,"MergeSort");   // MergeSort
-    }
-
-    /**
-     * Testing Best Case for both algorithm
-     */
-    void testingBestCase() {
-        System.out.println("Best Case (Sorted List)");
-        System.out.print("Original List: ");
-        printList(sortedList);
-        System.out.println();
-        getRunningTime(sortedList,"Insertion");   // Insertion Sort
-        getRunningTime(sortedList,"MergeSort");   // MergeSort
-    }
-
-    /**
-     * Testing Average Case for both algorithm
-     */
-    void testingAvgCase() {
-        System.out.println("Average Case");
-        System.out.print("Original List: ");
-        printList(avgList);
-        System.out.println();
-        getRunningTime(avgList,"Insertion");    // Insertion Sort
-        getRunningTime(avgList, "MergeSort");   // MergeSort
+        getRunningTime(list,"Insertion");   // Insertion Sort
+        getRunningTime(list,"MergeSort");   // MergeSort
     }
 
     /**
@@ -98,5 +74,17 @@ class sortingTester {
             System.out.print(A[i] + " ");
         }
         System.out.println();
+    }
+
+    public int[] getAvgList() {
+        return avgList;
+    }
+
+    public int[] getReversedList() {
+        return reversedList;
+    }
+
+    public int[] getSortedList() {
+        return sortedList;
     }
 }

@@ -4,12 +4,12 @@ public class main {
     public static void main(String[] args) {
         sortingTester tester = new sortingTester();
 
-        tester.testingWorseCase();
+        tester.testingCase("Worst", tester.getReversedList());
         System.out.println("===================================");
 
-        tester.testingBestCase();
+        tester.testingCase("Best", tester.getSortedList());
         System.out.println("===================================");
 
-        tester.testingAvgCase();
+        tester.testingCase("Average", tester.getAvgList());
     }
 }
